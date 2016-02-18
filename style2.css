@@ -275,12 +275,15 @@ figure {
 	display: inline-block;
 	flex-basis: 30%;
 	background-color: #ffffff;
-	border: 1px solid #a7a7a7;
+
 	margin: 20px 0;
 }
 
 figcaption {
-
+	border: 1px solid #a7a7a7;
+	border-top: none;
 	padding: 20px 10px;
 	font-size: 1.5em;
+	position: relative;
+	top: -2px;
 }
