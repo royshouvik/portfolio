@@ -29,4 +29,12 @@ $(document).ready(function() {
         }, 500);
     });
 
+    $(".toggle").click(function(event) {
+        $("nav").toggleClass("display");
+        event.preventDefault();
+    });
+
+
+
+
 });
