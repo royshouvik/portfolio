@@ -212,10 +212,11 @@ ul.social {
     z-index: -1;
     border: 1px solid black;
     background-image: url(images/bg.jpg);
+    background-clip: content-box;
     background-size: cover;
     background-position: top left;
-    width: 77%;
-    height: 101%;
+    width: 78%;
+    height: 100%;
     -webkit-filter: blur(4px);
     filter: blur(4px);
 }
@@ -378,8 +379,8 @@ figcaption {
 	}
 
 	.background-image {
-		left : -1%;
-		width: 102%;
+		left : 0%;
+		width: 99.5%;
 	}
 
 }
