@@ -1,12 +1,4 @@
-(function() {
-                // initialize svg
 
-                [].slice.call( document.querySelectorAll( '.si-icons-default > .si-icon' ) ).forEach( function( el ) {
-                    var svgicon = new svgIcon( el, svgIconConfig );
-                } );
-                new svgIcon( document.querySelector( '.si-icons-easing .si-icon-hamburger-cross' ), svgIconConfig, { easing : mina.elastic, speed: 600 } );
-
-            })();
 
 
 $(document).ready(function() {
@@ -35,3 +27,13 @@ $(document).ready(function() {
     });
 
 });
+
+(function() {
+                // initialize svg
+
+                [].slice.call( document.querySelectorAll( '.si-icons-default > .si-icon' ) ).forEach( function( el ) {
+                    var svgicon = new svgIcon( el, svgIconConfig );
+                } );
+                new svgIcon( document.querySelector( '.si-icons-easing .si-icon-hamburger-cross' ), svgIconConfig, { easing : mina.elastic, speed: 600 } );
+
+            })();
