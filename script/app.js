@@ -10,7 +10,7 @@ $(document).ready(function() {
         fitToSection : false,
         normalScrollElements: '.footer',
         afterLoad: function () {
-            console.log("hello");
+
             $("nav").removeClass("display");
         }
     });
