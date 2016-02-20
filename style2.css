@@ -1,5 +1,5 @@
 html {
-    font-size: 16px;
+    font-size: 100%;
 }
 
 body {
@@ -13,7 +13,7 @@ main {
 }
 
 .shadow {
-    text-shadow: 2px 2px 1px #000;
+    text-shadow: 2px 2px 1px rgba(0,0,0, 0.8);
 }
 
 h1 {
@@ -29,17 +29,18 @@ h2 {
     font-size: 2em;
     text-decoration: none;
     color: #ffffff;
-    background-color: #55aaaa;
-    display: block;
+    background-color: hsla(177, 85%, 45%, 0.9);
+    display: inline-block;
     margin: 7.70% auto;
     padding: 2%;
     border-radius: 10px;
     transition: 0.3s;
+    text-shadow: 2px 2px 1px rgba(0,0,0, 0.2);
 }
 
 .button:hover {
     background-color: #77cccc;
-    box-shadow: 0px 0px 38px 2px rgba(188, 230, 230, 0.7);
+    box-shadow: 0px 0px 30px 2px rgba(188, 230, 230, 0.7);
     -webkit-transform: scale(1.1, 1.1);
     transform: scale(1.1, 1.1);
 }
@@ -50,7 +51,6 @@ nav {
     position: fixed;
     background: #232323 url(images/debut_dark.png) top left repeat;
     color: white;
-    box-shadow: inset -5px -2px 38px 3px rgba(0, 0, 0, 0.7);
     transition: 0.5s;
 }
 
@@ -79,9 +79,6 @@ ul.nav li {
     padding: 3.225% 9.090%;
 }
 
-section {
-    height: 60%;
-}
 
 ul.nav li a {
     text-decoration: none;
@@ -223,16 +220,20 @@ ul.social {
 
 .background-image {
     position: absolute;
-    left: 22%;
+    left: 0;
     right: 0;
     top: -1%;
     z-index: -1;
+
     background-image: url(images/bg.jpg);
     overflow: hidden;
-    background-clip: content-box;
+    background-attachment: fixed;
+    background-clip: border-box;
     background-size: cover;
     background-position: top left;
-    width: 78%;
+    box-shadow: inset 0 0 48px 0 rgba(0, 0, 0, 0.7),
+    			 0 0 48px 10px rgba(0, 0, 0, 0.7);
+    width: 100%;
     height: 100%;
     -webkit-filter: blur(4px);
     filter: blur(4px);
@@ -256,6 +257,9 @@ ul.social {
     align-items: center;
 }
 
+.about, .contact {
+	height: 100%;
+}
 .portfolio {
     background-color: #f9f9f9;
     border-bottom: 1px solid #d0d0d0;
@@ -271,7 +275,7 @@ ul.social {
 }
 
 .footer {
-    height: 20%;
+    height: 150px;
     border-top: 1px solid #a0a0a0;
     background: #ffffff url(images/whitey.png) top left repeat;
 }
@@ -300,6 +304,7 @@ ul.social {
 .contact h1 {
     text-align: center;
     padding: 8% 0 5% 0;
+    text-shadow: 2px 2px 1px rgba(0,0,0, 0.2);
 }
 
 .project {
@@ -311,13 +316,15 @@ figure {
     display: inline-block;
     -ms-flex-preferred-size: 30%;
     -webkit-flex-basis: 30%;
-    flex-basis: 30%;
+            flex-basis: 30%;
     background-color: #ffffff;
     margin: 4% 0;
+
     transition: 0.4s;
 }
 
 figure:hover {
+
     -webkit-transform: scale(1.1, 1.1);
     transform: scale(1.1, 1.1);
 }
@@ -330,7 +337,22 @@ figcaption {
     position: relative;
     top: -2px;
 }
+/****************************** SVG ***************************************/
+.si-icons span {
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	margin: 40px 30px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
 
+.si-icons-hover span {
+	width: 128px;
+	height: 128px;
+	margin: 50px 40px;
+}
 
 /****************************** Media Queries *****************************/
 
@@ -378,13 +400,19 @@ figcaption {
     figure {
         -ms-flex-preferred-size: 45%;
         -webkit-flex-basis: 45%;
-        flex-basis: 45%;
+                flex-basis: 45%;
     }
 }
 
 @media screen and (max-width: 960px) {
     nav {
 		left: -30%;
+    }
+    .display {
+    	width: 30%;
+    }
+    .profile {
+		width: 100%;
     }
     .main {
         width: 100%;
@@ -399,7 +427,7 @@ figcaption {
     figure {
         -ms-flex-preferred-size: 80%;
         -webkit-flex-basis: 80%;
-        flex-basis: 80%;
+                flex-basis: 80%;
     }
 
     h2.shadow {
