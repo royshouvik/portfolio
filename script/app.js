@@ -10,8 +10,9 @@ $(document).ready(function() {
         fitToSection : false,
         normalScrollElements: '.footer',
         afterLoad: function () {
-
             $("nav").removeClass("display");
+            $(".toggle span").removeClass("genericon-close-alt").addClass("genericon-menu");
+            $(".toggle").removeClass("move-right");
         }
     });
 
@@ -23,17 +24,10 @@ $(document).ready(function() {
 
     $(".toggle").click(function(event) {
         $("nav").toggleClass("display");
+        $(".toggle span").toggleClass("genericon-menu genericon-close-alt");
+        $(".toggle").toggleClass("move-right");
         event.preventDefault();
     });
 
 });
 
-(function() {
-                // initialize svg
-
-                [].slice.call( document.querySelectorAll( '.si-icons-default > .si-icon' ) ).forEach( function( el ) {
-                    var svgicon = new svgIcon( el, svgIconConfig );
-                } );
-                new svgIcon( document.querySelector( '.si-icons-easing .si-icon-hamburger-cross' ), svgIconConfig, { easing : mina.elastic, speed: 600 } );
-
-            })();
